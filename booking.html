@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+          font-family: "Poppins", sans-serif;
+        }
+        .nav-link:hover {
+          color: #ffffff;
+          background-color: #2563eb;
+          border-radius: 5px;
+          transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .dropdown:hover .dropdown-menu {
+          display: block;
+        }
+      </style>
+</head>
+<body>
+    <section id="book" class="py-12 bg-blue-100">
+        <div class="container mx-auto">
+          <h3 class="text-3xl font-semibold text-center mb-6">Book Your Stay</h3>
+          <form class="flex w-4/5 mx-auto mb-16">
+            <input type="text" class="input-search pl-2 rounded-l" placeholder="search hotels, suites...">
+            <button class="search bg-blue-700 text-white px-1 py-1 rounded-r">search</button>
+          </form>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-5/6 mx-auto final">
+            
+          
+        </div>
+      </section>
+
+      <script src="./booking.js"></script>
+</body>
+</html>

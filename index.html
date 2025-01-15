@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StayHaven - Modern Hotel Booking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .nav-link:hover {
+        color: #ffffff;
+        background-color: #2563eb;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+    </style>
+  </head>
+  <body class="font-sans text-gray-800 bg-gray-100">
+    <!-- Responsive Navigation Bar -->
+      <nav class="bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg">
+        <div class="container mx-auto flex justify-between items-center p-4">
+          <!-- Brand Logo -->
+          <a href="#" class="text-2xl font-bold">StayHaven</a>
+      
+          <!-- Toggle Button for Mobile -->
+          <button 
+            id="menu-toggle" 
+            class="text-white md:hidden focus:outline-none"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+      
+          <!-- Navigation Links -->
+          <ul 
+            id="menu" 
+            class="hidden md:flex space-x-6 items-center md:space-x-8"
+          >
+            <li><a href="#" class="hover:text-yellow-300">Home</a></li>
+            <li><a href="#services" class="hover:text-yellow-300">Services</a></li>
+            <li><a href="#gallery" class="hover:text-yellow-300">Gallery</a></li>
+            <li><a href="#about" class="hover:text-yellow-300">About Us</a></li>
+            <li><a href="#contact" class="hover:text-yellow-300">Contact</a></li>
+            <li>
+              <a 
+                href="./booking.html" 
+                class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500"
+              >
+                Book Now
+              </a>
+            </li>
+          </ul>
+        </div>
+      
+        <!-- Mobile Menu -->
+        <div 
+          id="mobile-menu" 
+          class="hidden md:hidden bg-blue-500 text-white"
+        >
+          <ul class="space-y-2 p-4">
+            <li><a href="#" class="block hover:text-yellow-300">Home</a></li>
+            <li><a href="#services" class="block hover:text-yellow-300">Services</a></li>
+            <li><a href="#gallery" class="block hover:text-yellow-300">Gallery</a></li>
+            <li><a href="#about" class="block hover:text-yellow-300">About Us</a></li>
+            <li><a href="#contact" class="block hover:text-yellow-300">Contact</a></li>
+            <li>
+              <a 
+                href="#book" 
+                class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500 block text-center"
+              >
+                Book Now
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    <!-- Hero Section with Image Slider -->
+    <section id="home" class="relative w-full h-screen overflow-hidden">
+      <div class="slider relative w-full h-full">
+        <div class="slides flex transition-transform duration-500 ease-in-out">
+          <img
+            src="./build/Images/Untitled design (10).png"
+            alt="Luxury Hotel"
+            class="w-full h-screen object-cover"
+          />
+          <img
+            src="./build/Images/Lounge 2.png"
+            alt="Lounge"
+            class="w-full h-screen object-cover"
+          />
+          <img
+            src="./build/Images/event center.png"
+            alt="Event Hall"
+            class="w-full h-screen object-cover"
+          />
+          <img
+            src="./build/Images/Hero Section 2.png"
+            alt="Spa"
+            class="w-full h-screen object-cover"
+          />
+          <img
+            src="./build/Images/Resort.png"
+            alt="Resort"
+            class="w-full h-screen object-cover"
+          />
+        </div>
+        <button
+          class="prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75"
+        >
+          &#10094;
+        </button>
+        <button
+          class="next absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75"
+        >
+          &#10095;
+        </button>
+      </div>
+      <div class="absolute bottom-10 w-full text-center">
+        <h2 class="text-white text-4xl font-bold mb-4">
+          Find Your Perfect Stay
+        </h2>
+        <a
+          href="#book"
+          class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700"
+          >Book Now</a
+        >
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-semibold text-center mb-8 text-gray-800">
+          Our Services
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gray-100 shadow-md rounded-lg overflow-hidden">
+            <img
+              src="./build/Images/Hotel Room S.jpg"
+              alt="Luxury Room"
+              class="w-full h-40 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Luxury Hotel Rooms</h3>
+              <p>Experience unparalleled comfort in our premium rooms.</p>
+            </div>
+          </div>
+          <div class="bg-gray-100 shadow-md rounded-lg overflow-hidden">
+            <img
+              src="./build/Images/Lounge S.jpg"
+              alt="Lounges"
+              class="w-full h-40 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Relaxing Lounges</h3>
+              <p>Unwind in style in our premium lounges.</p>
+            </div>
+          </div>
+          <div class="bg-gray-100 shadow-md rounded-lg overflow-hidden">
+            <img
+              src="./build/Images/Event Space S.jpg"
+              alt="Event Spaces"
+              class="w-full h-40 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Event Spaces</h3>
+              <p>Host your events in our state-of-the-art venues.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-12 bg-gray-50">
+      <div class="container mx-auto">
+        <h3 class="text-3xl font-semibold text-center mb-8">Gallery</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Gallery Image 1 -->
+          <div class="relative group">
+            <img
+              src="./build/Images/Luxury Hotel G.jpg"
+              alt="Luxury Hotel"
+              class="rounded-lg shadow-lg w-full h-64 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <span class="text-white text-lg font-medium">Luxury Hotel</span>
+            </div>
+          </div>
+
+          <!-- Gallery Image 2 -->
+          <div class="relative group">
+            <img
+              src="./build/Images/Lounge G.jpg"
+              alt="Lounge"
+              class="rounded-lg shadow-lg w-full h-64 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <span class="text-white text-lg font-medium">Lounge</span>
+            </div>
+          </div>
+
+          <!-- Gallery Image 3 -->
+          <div class="relative group">
+            <img
+              src="./build/Images/Event Space G.jpg"
+              alt="Event Space"
+              class="rounded-lg shadow-lg w-full h-64 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <span class="text-white text-lg font-medium">Event Space</span>
+            </div>
+          </div>
+
+          <!-- Gallery Image 4 -->
+          <div class="relative group">
+            <img
+              src="./build/Images/Spa G.jpg"
+              alt="Relaxing Spa"
+              class="rounded-lg shadow-lg w-full h-64 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <span class="text-white text-lg font-medium">Relaxing Spa</span>
+            </div>
+          </div>
+
+          <!-- Gallery Image 5 -->
+          <div class="relative group">
+            <img
+              src="./build/Images/Resort G.jpg"
+              alt="Resort"
+              class="rounded-lg shadow-lg w-full h-64 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <span class="text-white text-lg font-medium">Resort</span>
+            </div>
+          </div>
+
+          <!-- Gallery Image 6 -->
+          <div class="relative group">
+            <img
+              src="./build/Images/Event Hall G.jpg"
+              alt="Event Hall"
+              class="rounded-lg shadow-lg w-full h-64 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <span class="text-white text-lg font-medium">Event Hall</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+       <!-- Booking Section -->
+       
+       <section id="about" class="bg-gray-50 py-12">
+        <div class="container mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <!-- Image -->
+            <div>
+              <img
+                src="./build/Images/About us.jpg"
+                alt="About Us Image"
+                class="rounded-lg shadow-lg w-full"
+              />
+            </div>
+      
+            <!-- Text Content -->
+            <div>
+              <h2 class="text-3xl font-bold text-blue-600 mb-4">About Us</h2>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                At StayHaven, we are redefining hospitality by combining comfort,
+                luxury, and efficiency. Whether you’re traveling for business or leisure, 
+                our hotels, lounges, and event spaces are designed to provide unparalleled experiences.
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-4">
+                With a team of dedicated professionals and state-of-the-art facilities, 
+                we ensure that every moment you spend with us is memorable. From luxurious rooms 
+                to elegantly designed event spaces, StayEase is your ultimate destination for relaxation, 
+                productivity, and celebration.
+              </p>
+              <p class="text-gray-700 leading-relaxed">
+                Join us as we continue to set new benchmarks in hospitality and provide experiences 
+                that stay with you forever.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-12 bg-grey-100">
+      <div class="container mx-auto">
+        <h3 class="text-3xl font-semibold text-center mb-8">Contact Us</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Contact Form -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <form id="contactForm" class="space-y-4">
+              <div>
+                <label for="name" class="block font-medium">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full border p-2 rounded-lg"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div>
+                <label for="email" class="block font-medium">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full border p-2 rounded-lg"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div>
+                <label for="message" class="block font-medium">Message</label>
+                <textarea
+                  id="message"
+                  class="w-full border p-2 rounded-lg"
+                  placeholder="Your Message"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <!-- Google Map -->
+          <div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345098173!2d-122.40132428468156!3d37.79236967975698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f2a37f03%3A0x5c7b7e1bde92957!2sGoogle!5e0!3m2!1sen!2sus!4v1631234567890!5m2!1sen!2sus"
+              width="100%"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 text-center">
+      <p>&copy; 2024 StayEase. All rights reserved.</p>
+    </footer>
+  <script defer src="script.js"></script>
+  </body>
+</html>
