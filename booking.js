@@ -9,8 +9,6 @@ const baseUrl = "https://api.foursquare.com/v3/places/";
 
 
 const hotelData = async () => {
-
-  
   let query = inputSearch.value
   const res = await fetch(`${baseUrl}search?query=${query}&categories=19014&limit=50`, {
     method: 'GET',
@@ -20,9 +18,9 @@ const hotelData = async () => {
   });
 
   const data = await res.json();
-  const searchedResponse = data.results
+  let searchedResponse = data.results
 
-  // const hotelImage =  () => {
+  
     let hotelDetails = ""
     searchedResponse.map(async (eachSearchedResponse) => {
       console.log(eachSearchedResponse);
@@ -33,6 +31,7 @@ const hotelData = async () => {
         }
       })
       const secondData = await response.json();
+      console.log(secondData);
       hotelDetails += `<div class="p-6 bg-white flex flex-col justify-between xs:w-4/5 xs:mx-auto shadow-md rounded-lg">
                         <img
                           src="${secondData[2].prefix}original${secondData[2].suffix}"
@@ -54,29 +53,24 @@ const hotelData = async () => {
     
     Final.innerHTML = hotelDetails
     })
-    // console.log(searchedResponse);
-  // }
-
-// hotelImage()
-
-  // hotelImage()
-  // data.results.map((newData) => {
-  //   console.log((newData.categories[0].icon.prefix)+(newData.categories[0].icon.suffix));
-  //   return(
-  //     `<img src="${newData.catgories}/>`
-  //   )
-  // })
 };
 
-hotelData()
+// hotelData()
 
 Search.addEventListener('click', (e)=> {
   e.preventDefault()
-  // console.log("button clicked");
-  hotelData();
+  console.log("button clicked");
+  
+  let hotelDetails = ""
+  if (inputSearch.value == "") {
+    console.log("it is empty");
+    hotelDetails += `<h4 class="text-xl font-bold mb-2">PLEASE INPUT THE NAME OF AN HOTEL OR LOUNGE.</h4>`
+  } else{
+    hotelData();
+  }
+  Final.innerHTML = hotelDetails
   // console.log(inputSearch.value);
 })
 
 
 
-// Final.textContent = hotelData()
