@@ -55,7 +55,7 @@ const hotelData = async () => {
     })
 };
 
-// hotelData()
+hotelData()
 
 Search.addEventListener('click', (e)=> {
   e.preventDefault()
